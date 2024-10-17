@@ -9,4 +9,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Echo string
-        run: echo "Hello this first github action workflow"
+        run: |
+          echo "Hello this first github action workflow"
+          echo ${{ github.ref }}-${{ github.workflow }}
